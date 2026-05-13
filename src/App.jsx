@@ -146,7 +146,7 @@ export default function App() {
   // Admin
   const [adminPinInput, setAdminPinInput] = useState("");
   const [adminAuthed, setAdminAuthed] = useState(false);
-  const ADMIN_PIN = "0000"; // Change this in code before deploying!
+  const ADMIN_PIN = "4376"; // Change this in code before deploying!
   const [newEmpName, setNewEmpName] = useState("");
   const [newEmpPin, setNewEmpPin] = useState("");
   const [filterEmp, setFilterEmp] = useState("all");
