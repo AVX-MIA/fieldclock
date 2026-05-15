@@ -191,7 +191,7 @@ export default function App() {
       await addDoc(collection(db, "timeRecords"), {
         employeeId: user.id,
         employeeName: user.name,
-        clockIn: Date.now(),
+        clockIn: Date(),
         entryType,
         clockInAddress: entryType === "work" ? address.trim() : null,
         customer: entryType === "work" ? customer.trim() : "",
@@ -213,7 +213,7 @@ export default function App() {
     flash("loading", "Saving…");
     try {
       await updateDoc(doc(db, "timeRecords", currentRecord.id), {
-        clockOut: Date.now(),
+        clockOut: Date(),
         clockOutAddress: currentRecord.clockInAddress || null,
       });
       flash("success", `✓ Clocked OUT — ${formatDuration(Date.now() - currentRecord.clockIn)} shift`);
